@@ -1,6 +1,6 @@
 # C++ implemententation of [Ultra-Light-Fast-Generic-Face-Detector-1MB](https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB) with [NCNN](https://github.com/Tencent/ncnn)
 
-## Build
+## Build-方法
 
 ```bash
 git clone --recursive --depth=1 https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB
@@ -11,11 +11,28 @@ mkdir build && cd build && cmake ..
 make -j$(nproc)
 ```
 
-## Run
+## Run-方法
 
 ```bash
 ./main ../data/version-RFB/RFB-320.bin ../data/version-RFB/RFB-320.param ../data/test.jpg
 ```
+
+## 树莓派Build-方法
+
+```bash
+git clone --recursive --depth=1 https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB
+
+cd Ultra-Light-Fast-Generic-Face-Detector-1MB/ncnn/ncnn_build/
+
+make
+```
+
+## 树莓派Run-方法
+
+```bash
+./main ../data/version-RFB/RFB-320.bin ../data/version-RFB/RFB-320.param ../data/test.jpg
+```
+
 * We provide converted NCNN models of version-slim-320 and version-RFB-320 in ./ncnn/data .
 
 ## How to convert pretrained model to ncnn
